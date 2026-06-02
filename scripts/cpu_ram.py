@@ -1,22 +1,24 @@
 import psutil
 import mysql.connector
 
-conn mysql.connector.connect(
+conn = mysql.connector.connect(
     host="localhost",
-    user="root"
+    user="root",
     password="PASSORD123",
     database="exsamen_cpuram"
 )
 
 cursor = conn.cursor()
+
 cpu = psutil.cpu_percent()
-ram = psutil.virtual_memory()
+ram = psutil.virtual_memory().percent
 
 sql = "INSERT INTO system_status (cpu, ram) VALUES (%s, %s)"
 cursor.execute(sql, (cpu, ram))
+
 conn.commit()
 conn.close()
 
-print("Dat Lagret!")
+print("Data Lagret!")
 print("CPU:", cpu)
 print("RAM:", ram)
