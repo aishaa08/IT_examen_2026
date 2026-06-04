@@ -16,12 +16,12 @@ def hovedside():
     conn = hent_database()
     cursor = conn.cursor(dictionary=True)
 
-    cursor.execute("SELECT * FROM system_cpu ORDER BY created_at DESC LIMIT 1")
-    siste_data = cursor.fetchone()
+    cursor.execute("SELECT * FROM system_cpu ORDER BY created_at DESC LIMIT 10")
+    data = cursor.fetchall()
 
     conn.close()
 
-    return render_template("hovedside.html", data=siste_data)
+    return render_template("hovedside.html", data=data)
 
 @app.route("/arbeidere")
 def arbeidere():

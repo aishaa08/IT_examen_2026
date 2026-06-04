@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stil.css') }}">
 </head>
 <body>
     
@@ -13,7 +14,7 @@
 
     <hr>
     
-    <h2>Siste servermåling</h2>
+    <h2>Servermåling</h2>
 
     <p>CPU: {{ data.cpu}}%</p>
 
