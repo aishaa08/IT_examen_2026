@@ -9,7 +9,7 @@ Overvåke CPU bruk
 Overvåke RAM bruk
 Lagring av historiske data i MariaDB
 Webbasert dashboard med flask
-Side for ansatte lagret i databasen
+Side med ansatte lagret i databasen
 
 TEKNOLOGI:
 Linux

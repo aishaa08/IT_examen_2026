@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansatte</title>
+</head>
+<body>
+
+<h1>Ansatte med serveransvar</h1>
+
+<a href="/">Hovedside</a>
+
+<table border="1">
+
+    {% for person in ansatte %}
+
+    <tr>
+        <td>{{person.navn}}</td>
+        <td>{{person.tittel}}</td>
+        <td>{{person.telefon}}</td>
+        <td>{{person.vaktstatus}}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+    
+</body>
+</html>
